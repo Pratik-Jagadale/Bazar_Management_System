@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24A45DD5-D5E7-41DA-8036-5B4DCF8C7170}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Annapurna_Bazar_Mgt_System</RootNamespace>
+    <AssemblyName>Annapurna_Bazar_Mgt_System</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABMSStock_dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABMSStock_dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABMS_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMS_MDI.Designer.cs">
+      <DependentUpon>ABMS_MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common_Class.cs" />
+    <Compile Include="Connection_Execution.cs" />
+    <Compile Include="DataSet\ds_Customer.cs">
+      <DependentUpon>ds_Customer.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet\ds_Customer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Customer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ds_Product.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Product.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ds_Stock_details.cs">
+      <DependentUpon>ds_Stock_details.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet\ds_Stock_details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Stock_details.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataset_category.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataset_category.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Customer.Designer.cs">
+      <DependentUpon>frm_Add_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Distributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Distributor.designer.cs">
+      <DependentUpon>frm_Add_Distributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_New_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_New_Product.designer.cs">
+      <DependentUpon>frm_Add_New_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Add_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Add_Stock.designer.cs">
+      <DependentUpon>frm_Add_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Distributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Distributor.designer.cs">
+      <DependentUpon>frm_Update_Distributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Update_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Update_Product.designer.cs">
+      <DependentUpon>frm_Update_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Distributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Distributor.designer.cs">
+      <DependentUpon>frm_View_Distributor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Product_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Product_Details.designer.cs">
+      <DependentUpon>frm_View_Product_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_View_Stock_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_View_Stock_update.designer.cs">
+      <DependentUpon>frm_View_Stock_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\frm_Customer_Date_wise_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_Customer_Date_wise_Report.Designer.cs">
+      <DependentUpon>frm_Customer_Date_wise_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_Customer_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_Customer_Report.Designer.cs">
+      <DependentUpon>frm_Customer_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_Product_P_date_wise_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_Product_P_date_wise_Report.Designer.cs">
+      <DependentUpon>frm_Product_P_date_wise_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_Stock_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_Stock_Report.Designer.cs">
+      <DependentUpon>frm_Stock_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_Stock_report_date_wise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_Stock_report_date_wise.Designer.cs">
+      <DependentUpon>frm_Stock_report_date_wise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Product_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Product_Report.Designer.cs">
+      <DependentUpon>Product_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\Rpt_customer1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_customer1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\Rpt_Product_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Product_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\Rpt_Stock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Stock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement.designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ABMS_MDI.resx">
+      <DependentUpon>ABMS_MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Customer.resx">
+      <DependentUpon>frm_Add_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Distributor.resx">
+      <DependentUpon>frm_Add_Distributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_New_Product.resx">
+      <DependentUpon>frm_Add_New_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Add_Stock.resx">
+      <DependentUpon>frm_Add_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Distributor.resx">
+      <DependentUpon>frm_Update_Distributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Update_Product.resx">
+      <DependentUpon>frm_Update_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Distributor.resx">
+      <DependentUpon>frm_View_Distributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Product_Details.resx">
+      <DependentUpon>frm_View_Product_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_View_Stock_update.resx">
+      <DependentUpon>frm_View_Stock_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\frm_Customer_Date_wise_Report.resx">
+      <DependentUpon>frm_Customer_Date_wise_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_Customer_Report.resx">
+      <DependentUpon>frm_Customer_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_Product_P_date_wise_Report.resx">
+      <DependentUpon>frm_Product_P_date_wise_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_Stock_Report.resx">
+      <DependentUpon>frm_Stock_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_Stock_report_date_wise.resx">
+      <DependentUpon>frm_Stock_report_date_wise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Product_Report.resx">
+      <DependentUpon>Product_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\Rpt_customer1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_customer1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\Rpt_Product_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Product_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\Rpt_Stock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Stock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ABMSDataSet.xsc">
+      <DependentUpon>ABMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ABMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABMSDataSet.xss">
+      <DependentUpon>ABMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ABMSDataSet1.xsc">
+      <DependentUpon>ABMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ABMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABMSDataSet1.xss">
+      <DependentUpon>ABMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ABMSStock_dataset.xsc">
+      <DependentUpon>ABMSStock_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="ABMSStock_dataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABMSStock_dataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABMSStock_dataset.xss">
+      <DependentUpon>ABMSStock_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="DataSet\ds_Customer.xsc">
+      <DependentUpon>ds_Customer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ds_Customer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Customer.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\ds_Customer.xss">
+      <DependentUpon>ds_Customer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ds_Product.xsc">
+      <DependentUpon>ds_Product.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ds_Product.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Product.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\ds_Product.xss">
+      <DependentUpon>ds_Product.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ds_Stock_details.xsc">
+      <DependentUpon>ds_Stock_details.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ds_Stock_details.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Stock_details.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\ds_Stock_details.xss">
+      <DependentUpon>ds_Stock_details.xsd</DependentUpon>
+    </None>
+    <None Include="dataset_category.xsc">
+      <DependentUpon>dataset_category.xsd</DependentUpon>
+    </None>
+    <None Include="dataset_category.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataset_category.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataset_category.xss">
+      <DependentUpon>dataset_category.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ABMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ABMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ABMS.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
